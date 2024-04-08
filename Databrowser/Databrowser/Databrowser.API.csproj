@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EFCore.NamingConventions" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.3" />
+    <PackageReference Include="Microsoft.NET.Build.Containers" Version="8.0.101" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Npgsql" Version="8.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+    <PackageReference Include="OData.Swagger" Version="1.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Databrowser.API.Databrowser\Databrowser.API.Databrowser.csproj" />
+    <ProjectReference Include="..\Databrowser.Configuration\Databrowser.Configuration.csproj" />
+    <ProjectReference Include="..\Databrowser.Domain\Databrowser.Domain.csproj" />
+    <ProjectReference Include="..\Databrowser.EntityContextKeeper\Databrowser.EntityContextKeeper.csproj" />
+    <ProjectReference Include="..\Databrowser.Infrastructure\Databrowser.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

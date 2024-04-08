@@ -1,0 +1,162 @@
+CREATE TABLE capacity_by_company_int_databrowser (
+    source_id TEXT,
+    col1 INT,
+	col2 INT,
+	col3 TEXT,
+    observations_agg_id_by_country TEXT,
+    observations_agg_id_by_region TEXT,
+    observations_agg_id_by_world TEXT,
+    observations_agg_id_by_geo_by_country TEXT,
+    observations_agg_id_by_geo_by_region TEXT,
+    observations_agg_id_by_geo_by_world TEXT
+);
+
+CREATE TABLE capacity_by_shareholder_int_databrowser (
+    source_id TEXT,
+    col1 INT,
+    col2 INT,
+    observations_agg_id_by_country TEXT,
+    observations_agg_id_by_region TEXT,
+    observations_agg_id_by_world TEXT,
+    observations_agg_id_by_geo_by_country TEXT,
+    observations_agg_id_by_geo_by_region TEXT,
+    observations_agg_id_by_geo_by_world TEXT,
+    observations_agg_id_by_city TEXT
+);
+
+CREATE TABLE capacity_by_geo_int_obs_agg_by_country_databrowser (
+    observations_agg_id_by_geo_by_country TEXT,
+    date DATE,
+    value1 DOUBLE PRECISION,
+    value2 DOUBLE PRECISION,
+    value3 DOUBLE PRECISION
+    
+);
+
+CREATE TABLE capacity_by_geo_int_obs_agg_by_region_databrowser (
+    observations_agg_id_by_geo_by_region TEXT,
+    date DATE,
+	value1 DOUBLE PRECISION,
+    value2 DOUBLE PRECISION,
+    value3 DOUBLE PRECISION
+);
+
+CREATE TABLE capacity_by_geo_int_obs_agg_by_world_databrowser (
+    observations_agg_id_by_geo_by_world TEXT,
+    date DATE,
+	value1 DOUBLE PRECISION,
+    value2 DOUBLE PRECISION,
+    value3 DOUBLE PRECISION
+);
+
+CREATE TABLE capacity_int_obs_agg_by_city_databrowser (
+    observations_agg_id_by_city TEXT,
+    date DATE,
+    value1 DOUBLE PRECISION,
+    value2 DOUBLE PRECISION,
+    value3 DOUBLE PRECISION
+);
+
+CREATE TABLE capacity_int_obs_agg_by_country_databrowser (
+    observations_agg_id_by_country TEXT,
+    date DATE,
+    value1 DOUBLE PRECISION,
+    value2 DOUBLE PRECISION,
+    value3 DOUBLE PRECISION
+);
+
+CREATE TABLE capacity_int_obs_agg_by_region_databrowser (
+    observations_agg_id_by_region TEXT,
+    date DATE,
+    value1 DOUBLE PRECISION,
+    value2 DOUBLE PRECISION,
+    value3 DOUBLE PRECISION
+);
+
+CREATE TABLE capacity_int_obs_agg_by_world_databrowser (
+    observations_agg_id_by_world TEXT,
+    date DATE,
+    value1 DOUBLE PRECISION,
+    value2 DOUBLE PRECISION,
+    value3 DOUBLE PRECISION
+);
+
+CREATE TABLE capacity_int_observations_databrowser (
+    source_id TEXT,
+    date DATE,
+    value1 DOUBLE PRECISION,
+    value2 DOUBLE PRECISION,
+    value3 DOUBLE PRECISION
+);
+
+CREATE VIEW capacity_by_geo_int_obs_agg_by_country_databrowser_view AS
+SELECT 
+    observations_agg_id_by_geo_by_country,
+    date,
+    value1,
+    value2,
+    value3
+FROM capacity_by_geo_int_obs_agg_by_country_databrowser;
+
+CREATE VIEW capacity_by_geo_int_obs_agg_by_region_databrowser_view AS
+SELECT 
+    observations_agg_id_by_geo_by_region,
+    date,
+    value1,
+    value2,
+    value3
+FROM capacity_by_geo_int_obs_agg_by_region_databrowser;
+
+CREATE VIEW capacity_by_geo_int_obs_agg_by_world_databrowser_view AS
+SELECT 
+    observations_agg_id_by_geo_by_world,
+    date,
+    value1,
+    value2,
+    value3
+FROM capacity_by_geo_int_obs_agg_by_world_databrowser;
+
+CREATE VIEW capacity_int_obs_agg_by_city_databrowser_view AS
+SELECT 
+    observations_agg_id_by_city,
+    date,
+    value1,
+    value2,
+    value3
+FROM capacity_int_obs_agg_by_city_databrowser;
+
+CREATE VIEW capacity_int_obs_agg_by_country_databrowser_view AS
+SELECT 
+    observations_agg_id_by_country,
+    date,
+    value1,
+    value2,
+    value3
+FROM capacity_int_obs_agg_by_country_databrowser;
+
+CREATE VIEW capacity_int_obs_agg_by_region_databrowser_view AS
+SELECT 
+    observations_agg_id_by_region,
+    date,
+    value1,
+    value2,
+    value3
+FROM capacity_int_obs_agg_by_region_databrowser;
+
+CREATE VIEW capacity_int_obs_agg_by_world_databrowser_view AS
+SELECT 
+    observations_agg_id_by_world,
+    date,
+    value1,
+    value2,
+    value3
+FROM capacity_int_obs_agg_by_world_databrowser;
+
+CREATE VIEW capacity_int_observations_databrowser_view AS
+SELECT 
+    source_id,
+    date,
+    value1,
+    value2,
+    value3
+FROM capacity_int_observations_databrowser;

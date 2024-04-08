@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Databrowser.Configuration\Databrowser.Configuration.csproj" />
+    <ProjectReference Include="..\Databrowser.Domain\Databrowser.Domain.csproj" />
+    <ProjectReference Include="..\Databrowser.Infrastructure\Databrowser.Infrastructure.csproj" />
+    <ProjectReference Include="..\Databrowser.Service.Databrowser\Databrowser.Service.Databrowser.csproj" />
+  </ItemGroup>
+
+</Project>
